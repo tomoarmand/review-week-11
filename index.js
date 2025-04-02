@@ -18,16 +18,16 @@ const randomColors = [
     '#20BF55'
   ];
 
-  const randomIndex = Math.floor(Math.random() * randomColors.length);
-
+  
   randomButton.addEventListener("click", function(){
+    const randomIndex = Math.floor(Math.random() * randomColors.length);
     const random = randomColors[randomIndex];
     displayField.style.backgroundColor = random;
     displayField.innerText = random;
     console.log(random)
   });
 
-  inputField.addEventListener("change", (event) => {
+  inputField.addEventListener("input", (event) => {
     displayField.style.backgroundColor = inputField.value;
     displayField.innerText = inputField.value;
   });
